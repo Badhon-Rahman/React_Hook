@@ -7,7 +7,7 @@ function DataFetch(){
 
     useEffect(() => {
         if(search){
-            axios.get('http://127.0.0.1:8000/api/search/'+ search)
+            axios.get(`http://127.0.0.1:8000/api/search/${search}`)
             .then(res => {
                 getData(res.data);
             })
